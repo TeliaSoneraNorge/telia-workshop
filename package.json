@@ -1,0 +1,21 @@
+{
+  "name": "telia-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop"
+  },
+  "keywords": [
+    "telia",
+    "workshop"
+  ],
+  "author": "Even Stensberg<even-andre.stensberg@telia.no>",
+  "license": "MIT",
+  "devDependencies": {
+    "gatsby": "^2.0.85",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
