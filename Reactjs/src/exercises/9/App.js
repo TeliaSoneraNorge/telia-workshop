@@ -1,18 +1,29 @@
-// Wouldn't it be cool to be able to pass data to the Hello component?
-// Well, we can. This happens via attributes (or props).
-// Let's pass our individual first name (using an attribute with the name "name").
+// Event handlers shouldn't contain too much logic.
+// Let's just handle the event, and move any other logic to a separate class method.
 
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Hello from './Hello';
 
-function App() {
-	return (
-		<Fragment>
-			<Hello />
-			<p>Let's learn some React.</p>
-		</Fragment>
-	);
+class App extends Component {
+	render() {
+		const inputId = 'background-color';
+
+		return (
+			<Fragment>
+				<Hello name="Thorsten" />
+				<p>Let's learn some React.</p>
+				<button onClick={ () => alert( 'Cool!' ) }>Sure!</button>
+				<hr />
+				<p>
+					<label htmlFor={ inputId }>
+						Background color:
+						<input onChange={ ( e ) => document.body.style.backgroundColor = e.target.value } />
+					</label>
+				</p>
+			</Fragment>
+		);
+	}
 }
 
 export default App;

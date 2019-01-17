@@ -1,10 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-const root = document.getElementById( 'root' );
+import App from './App';
 
-const element = React.createElement( 'h1', {
-	children: 'Hello World!',
-} );
-
-render( element, root );
+render(
+	<App />,
+	document.getElementById( 'root' )
+);

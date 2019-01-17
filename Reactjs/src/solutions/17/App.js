@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
+import ChuckNorris from './ChuckNorris';
+import ColorButton from './ColorButton';
 import Hello from './Hello';
 
 class App extends Component {
@@ -11,6 +13,18 @@ class App extends Component {
 		this.setState( { backgroundColor }, () => {
 			document.body.style.backgroundColor = this.state.backgroundColor;
 		} );
+	};
+
+	renderColorButtons = () => {
+		const colors = [
+			'#c0ffee',
+			'#baddad',
+			'#facade',
+		];
+
+		return colors.map( ( color ) => (
+			<ColorButton key={ color } color={ color } onClick={ this.setBackgroundColor } />
+		) );
 	};
 
 	render() {
@@ -31,9 +45,9 @@ class App extends Component {
 						/>
 					</label>
 				</p>
-				<button onClick={ () => this.setBackgroundColor( '#c0ffee' ) }>#c0ffee</button>
-				<button onClick={ () => this.setBackgroundColor( '#baddad' ) }>#baddad</button>
-				<button onClick={ () => this.setBackgroundColor( '#facade' ) }>#facade</button>
+				{ this.renderColorButtons() }
+				<hr />
+				<ChuckNorris />
 			</Fragment>
 		);
 	}

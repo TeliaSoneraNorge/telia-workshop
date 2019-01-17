@@ -1,14 +1,13 @@
-// Feel the power of JSX.
-// We can write something that is pretty close to HTML markup.
-// In fact, it is syntactic sugar on top of JavaScript, meaning a function call.
+// Now, this file not be changed any more, so we could just move it one folder up.
+// In fact, the below code already is available in the main index.js file.
+// Please go there, and swap the two code snippets (by removing one of the asterisks in the "magic comment").
 
 import React from 'react';
 import { render } from 'react-dom';
 
-const root = document.getElementById( 'root' );
+import App from './App';
 
-const element = React.createElement( 'h1', {
-	children: 'Hello World!',
-} );
-
-render( element, root );
+render(
+	<App />,
+	document.getElementById( 'root' )
+);

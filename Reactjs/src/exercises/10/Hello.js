@@ -1,10 +1,16 @@
-// Let's add some type-checking for our props, and also handle default values differently.
-// We can do this with the help of the prop-types package.
-
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Hello( props ) {
-	return <h1>Hello { props.name || 'World' }!</h1>;
+	return <h1>Hello { props.name }!</h1>;
 }
+
+Hello.propTypes = {
+	name: PropTypes.string,
+};
+
+Hello.defaultProps = {
+	name: 'World',
+};
 
 export default Hello;

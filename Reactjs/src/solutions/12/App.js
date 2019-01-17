@@ -1,24 +1,42 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Hello from './Hello';
 
-function App() {
-	const inputId = 'background-color';
+class App extends Component {
+	state = {
+		backgroundColor: '',
+	};
 
-	return (
-		<Fragment>
-			<Hello name="Thorsten" />
-			<p>Let's learn some React.</p>
-			<button onClick={ () => alert( 'Cool!' ) }>Sure!</button>
-			<hr />
-			<p>
-				<label htmlFor={ inputId }>
-					Background color:
-					<input onChange={ ( e ) => document.body.style.backgroundColor = e.target.value } />
-				</label>
-			</p>
-		</Fragment>
-	);
+	setBackgroundColor = ( backgroundColor ) => {
+		this.setState( { backgroundColor }, () => {
+			document.body.style.backgroundColor = this.state.backgroundColor;
+		} );
+	};
+
+	render() {
+		const inputId = 'background-color';
+
+		return (
+			<Fragment>
+				<Hello name="Thorsten" />
+				<p>Let's learn some React.</p>
+				<button onClick={ () => alert( 'Cool!' ) }>Sure!</button>
+				<hr />
+				<p>
+					<label htmlFor={ inputId }>
+						Background color:
+						<input
+							value={ this.state.backgroundColor }
+							onChange={ ( e ) => this.setBackgroundColor( e.target.value ) }
+						/>
+					</label>
+				</p>
+				<button onClick={ () => this.setBackgroundColor( '#c0ffee' ) }>#c0ffee</button>
+				<button onClick={ () => this.setBackgroundColor( '#baddad' ) }>#baddad</button>
+				<button onClick={ () => this.setBackgroundColor( '#facade' ) }>#facade</button>
+			</Fragment>
+		);
+	}
 }
 
 export default App;
