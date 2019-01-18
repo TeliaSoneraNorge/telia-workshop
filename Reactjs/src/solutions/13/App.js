@@ -3,6 +3,8 @@ import React, { Component, Fragment } from 'react';
 import ColorButton from './ColorButton';
 import Hello from './Hello';
 
+// Seperartion of concerns
+
 class App extends Component {
 	state = {
 		backgroundColor: '',

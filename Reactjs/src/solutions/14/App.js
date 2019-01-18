@@ -3,6 +3,9 @@ import React, { Component, Fragment } from 'react';
 import ColorButton from './ColorButton';
 import Hello from './Hello';
 
+
+// Functionality based component-mapping
+
 class App extends Component {
 	state = {
 		backgroundColor: '',

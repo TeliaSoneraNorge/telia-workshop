@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 
 import Hello from './Hello';
 
+// Noticing common abstractions
+
 class App extends Component {
 	state = {
 		backgroundColor: '',

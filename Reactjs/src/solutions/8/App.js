@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 
 import Hello from './Hello';
 
+// React classes
+
 class App extends Component {
 	render() {
 		const inputId = 'background-color';

@@ -4,6 +4,8 @@ import ChuckNorris from './ChuckNorris';
 import ColorButton from './ColorButton';
 import Hello from './Hello';
 
+// Gradually loading
+
 class App extends Component {
 	state = {
 		backgroundColor: '',

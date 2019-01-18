@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 
 import Hello from './Hello';
 
+// Adding more functionality 
+
 class App extends Component {
 	setBackgroundColor = ( backgroundColor ) => {
 		document.body.style.backgroundColor = backgroundColor;

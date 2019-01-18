@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 
 import Hello from './Hello';
 
+// Component Abstraction
+
 function App() {
 	return (
 		<Fragment>

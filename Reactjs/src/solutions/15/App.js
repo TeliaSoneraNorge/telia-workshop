@@ -4,6 +4,8 @@ import ChuckNorris from './ChuckNorris';
 import ColorButton from './ColorButton';
 import Hello from './Hello';
 
+// Data fetching
+
 class App extends Component {
 	state = {
 		backgroundColor: '',

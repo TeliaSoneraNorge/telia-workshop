@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 
 import Hello from './Hello';
 
+// Event handling
+
 function App() {
 	const inputId = 'background-color';
 

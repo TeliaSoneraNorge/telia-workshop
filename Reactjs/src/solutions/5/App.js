@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 
 import Hello from './Hello';
 
+// Proptypes 
+
 function App() {
 	return (
 		<Fragment>

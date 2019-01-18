@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 
 import Hello from './Hello';
 
+// State
+
 class App extends Component {
 	state = {
 		backgroundColor: '',
